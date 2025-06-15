@@ -1,0 +1,36 @@
+<!--Create a div with some text inside. When the user hovers (mouse over) on the div, change its background color to light blue. 
+When the mouse leaves, revert it back to white.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div-1">
+        <h1>Welcome to JavaScript</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, exercitationem omnis modi ad quisquam
+            quidem quo, excepturi quod dignissimos cumque, quae ab. In ad fugit exercitationem molestiae magni id
+            deleniti.</p>
+    </div>
+
+    <script>
+        let div = document.getElementById('div-1');
+
+        function changeBackground() {
+            div.style.backgroundColor = 'lightblue';
+        }
+        div.addEventListener('mouseover', changeBackground);
+
+        function reset() {
+            div.style.backgroundColor = 'white';
+        }
+        div.addEventListener('mouseout', reset);
+    </script>
+</body>
+
+</html>
